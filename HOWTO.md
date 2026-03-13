@@ -292,7 +292,7 @@ For offline analysis without re-fetching, use `python main_static.py` or open th
 ## Project Structure
 
 ```
-quant_arbitrage/
+tsla-mexc-quant_arbitrage/
 ├── HOWTO.md                     ← You are here
 ├── README.md                    ← Strategy overview and quick start
 ├── Dockerfile                   ← Container image (app + CLI)
