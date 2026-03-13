@@ -75,8 +75,6 @@ z-score mean-reversion during NYSE market hours.
 - **Fast reversion**: OU half-life ~1.9 min — spreads close within minutes
 - **High correlation**: 0.92 between TSLA and TESLA_USDT
 
-> **Important**: Profitability depends on low MEXC fees (≤ 3 bps/side). At 4+ bps the strategy turns unprofitable on the reference sample.
-
 ---
 
 ## Verified Results
@@ -129,7 +127,7 @@ python main.py [OPTIONS]
 ## Project Structure
 
 ```
-quant_arbitrage/
+tsla-mexc-quant_arbitrage/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── config.py               # All strategy and fee parameters
