@@ -13,7 +13,7 @@ No Python installation required. Docker handles everything.
 ### 1. Start the Streamlit App
 
 ```bash
-cd quant_arbitrage/
+cd tsla-mexc-quant_arbitrage/
 docker compose up --build
 ```
 
