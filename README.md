@@ -165,6 +165,3 @@ quant_arbitrage/
 ```
 
 ---
-
-*For research purposes only. Past performance does not guarantee future results.*
-# tsla-mexc-quant-arbitrage
