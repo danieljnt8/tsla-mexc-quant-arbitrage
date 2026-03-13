@@ -1,0 +1,14 @@
+# app/requirements.txt
+# Additional dependencies for the Streamlit app.
+# Install alongside quant_arbitrage/requirements.txt:
+#
+#   pip install -r requirements.txt           # main project deps
+#   pip install -r app/requirements.txt       # app-specific deps
+#
+# Or install everything at once:
+#   pip install -r requirements.txt -r app/requirements.txt
+
+streamlit>=1.32
+plotly>=5.20
+statsmodels>=0.14    # adfuller (ADF test), ACF
+scipy>=1.12          # used by statsmodels; OU half-life OLS

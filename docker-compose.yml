@@ -1,0 +1,22 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      # Persist Excel data cache and generated reports on the host
+      - ./data:/app/data
+      - ./reports:/app/reports
+      - ./app/reports:/app/app/reports
+    restart: unless-stopped
+
+  # One-off CLI runner — use: docker compose run --rm cli python main.py [args]
+  cli:
+    build: .
+    volumes:
+      - ./data:/app/data
+      - ./reports:/app/reports
+    entrypoint: []
+    command: ["python", "main.py"]
+    profiles:
+      - cli
