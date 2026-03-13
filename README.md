@@ -9,7 +9,7 @@ A statistical arbitrage backtester for the spread between TSLA equity (NYSE) and
 ### Option A — Docker (no Python setup required)
 
 ```bash
-cd quant_arbitrage/
+cd tsla-mexc-quant-arbitrage/
 
 # Build and launch the Streamlit app
 docker compose up --build
