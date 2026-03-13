@@ -1,37 +1,3 @@
-"""
-src/strategy/quant_strategy.py
-============================
-Quant Approach (Strategy A) signal generation.
-
-Signal semantics
-----------------
-  signal[t] in {"short_mexc", "long_mexc", "flat"}
-
-  "short_mexc" at bar t means:
-    - z_score[t] >= +entry_threshold
-    - MEXC is overpriced relative to TSLA (log-spread above its rolling mean)
-    - Trade action: SHORT MEXC, LONG TSLA
-
-  "long_mexc" at bar t means:
-    - z_score[t] <= -entry_threshold
-    - MEXC is underpriced relative to TSLA
-    - Trade action: LONG MEXC, SHORT TSLA
-
-  "flat" means: no entry signal (NaN z, cooldown period, or |z| < threshold)
-
-Execution model
----------------
-  The engine reads signal[t] at bar t's close and opens the position at
-  bar t+1's OPEN price.  This is the key realism property of the Quant approach:
-  you read the signal, send the order, and it fills at the next bar's open.
-  The strategy only generates signals — timing of fills is the engine's job.
-
-No abstract base class
-----------------------
-  Since this project implements exactly one strategy, there is no need for an
-  abstract BaseStrategy.  Adding one would be a premature abstraction.
-"""
-
 from __future__ import annotations
 
 import numpy as np
